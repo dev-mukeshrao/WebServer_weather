@@ -54,7 +54,9 @@ app.get('/weather', (req,res) => {
             
             forecast: `Time is ${data.location.localtime}, Condition today is ${data.current.condition.text} wind direction is ${data.current.wind_dir} and its speed in KPH is ${data.current.wind_kph}`,
             location: data.location.country,
-            address: data.location.name
+            address: data.location.name,
+            ast: data.forecast
+            
     
         })
 

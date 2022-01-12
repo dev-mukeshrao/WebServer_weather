@@ -15,13 +15,13 @@ const forecast = (location, send) => {
         else{
             const data = response.body;
             const err = response.body.error;
-            send(err, data);
+            send(err, response.body);
         //    send('1',`Time is ${data.location.localtime}, Condition today is ${data.current.condition.text} wind direction is ${data.current.wind_dir} and its speed in KPH is ${data.current.wind_kph}`);
         //     send('3',`${data.location.name} -> Longtitute : ${data.location.lon} , Latitude : ${data.location.lat}`);
         
-        //     const ast = response.body.forecast;
+        //    const ast = response.body.forecast;
         
-        //     ast.forecastday.forEach(ele => send('2',ele.astro))
+        //      ast.forecastday.forEach(ele => send('2',ele.astro))
         }
        
     })
