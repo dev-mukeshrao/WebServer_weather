@@ -35,7 +35,7 @@ weatherForm.addEventListener('submit', (e) => {
                 m2.textContent = data.forecast;
                 const ast = data.ast;
                 ast.forecastday.forEach(ele => {
-                    m3.textContent = ele.astro.sunrise;
+                    m3.textContent = 'Astro details ---> Sunrise: ' + ele.astro.sunrise + ' Sunset: ' + ele.astro.sunset + ' Moonrise: ' + ele.astro.moonrise + ' Moonset: ' + ele.astro.moonset + ' Moon Phase: ' + ele.astro.moon_phase + ' Moon Illumination: ' + ele.astro.moon_illumination;
                     console.log(ele.astro);
                 })
                 
