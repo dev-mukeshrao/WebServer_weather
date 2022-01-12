@@ -9,6 +9,7 @@ console.log(__dirname);
 const publicdirectory = path.join(__dirname, '../public');
 const partialpath = path.join(__dirname, '../views/partials')
 const app = express();
+const port = process.env.PORT || 3000
 
 app.set('view engine','hbs');
 app.use(express.static(publicdirectory))
@@ -83,6 +84,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(5000, () => {
-    console.log('server up and running on port 5000');
+app.listen(port, () => {
+    console.log('server up and running on port' + port);
 })
